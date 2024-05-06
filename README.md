@@ -14,15 +14,10 @@ This repository contains the source code for the JEEVAN website, which is a plat
 
 ## Usage
 
-1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/your-username/your-repository.git
-    ```
+1. Open the `index.html` file in your web browser to view the website locally.
 
-2. Open the `index.html` file in your web browser to view the website locally.
-
-3. Customize the content and styles as needed.
+2. Customize the content and styles as needed.
 
 ## Credits
 
