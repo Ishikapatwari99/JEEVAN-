@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn and SignUp Form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/b6442fa2b2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">SignUp</h1>
+            <form id="signup-form">
+                <div class="input-field" id="namefield">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="Name" placeholder="Name" id="name" required>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="Email" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-regular fa-lock"></i>
+                        <input type="password" placeholder="password" id="password" required>
+                    </div>
+                </div>
+                <p> <b>Login Here </b> <a href="login.html">Click Here</a></p> <br>
+                <style>
+                    a:link {
+                        color: blue;
+                    }
+                </style>
+            </form>
+            <div class="btn-field">
+                <button type="button" id="signupbtn" onclick="collectdata()">Sign Up</button>
+                <!-- <div class="w-18">
+                    <span id="message" class="succesfull"></span>
+                </div> -->
+                <!-- <button type="submit" id="signinbtn" onclick="handleLogin()" class="disable">Log in </button> -->
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        // let signup = document.getElementaryById("signupbtn");
+        // let signin = document.getElementaryById("signinbtn");
+        // let namefield = document.getElementaryById("namefield");
+        // let title = document.getElementaryById("title");
+
+        //     signinbtn.onclick = function () {
+        //     namefield.style.maxheight = "0";
+        //     title.innerHTML = "Sign In";
+        //     signupbtn.classlist.add("disable");
+        //     signinpbtn.classlist.remove("disable");
+        // }
+    </script>
+    <!-- <script>
+        let signup = document.getElementById("signupbtn");
+        let signin = document.getElementById("signinbtn");
+        let namefield = document.getElementById("namefield");
+        let title = document.getElementById("title");
+    
+        signin.onclick = function () {
+            namefield.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signup.classList.add("disable");
+            signin.classList.remove("disable");
+        }
+    </script> -->
+    <script>
+        // let signup = document.getElementById("signupbtn");
+        // let signin = document.getElementById("signinbtn");
+        // let namefield = document.getElementById("namefield");
+        // let title = document.getElementById("title");
+
+        // signin.onclick = function () {
+        //     namefield.style.maxHeight = "0";
+        //     title.innerHTML = "Log In";
+        //     signup.classList.add("disable");
+        //     signin.classList.remove("disable");
+        // }
+        // // signup.onclick = function () {
+        //     namefield.style.maxHeight = "initial";
+        //     title.innerHTML = "Sign Up";
+        //     signup.classList.remove("disable");
+        //     signin.classList.add("disable");
+        // }
+        const collectdata=async()=>{
+            // alert("test");
+        // const form = document.getElementById('signup-form');
+
+            // let payload={};
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            console.log(name,email,password);
+
+            const data = { name, email,password };
+            let result =  await fetch("http://localhost:3000/register", {
+                method: 'post',
+                headers: {
+                    "content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            // console.log(JSON.stringify(data))
+            // const json =  response.json();
+            // console.log(json);
+            result = await result.json();
+            console.log(result);
+            if(result.name){
+        localStorage.setItem("user",JSON.stringify(result))
+        location.href= "./login.html";
+    }
+            
+    }
+    </script>
+
+
+</body>
+
+</html>

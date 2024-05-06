@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>JEEVAN</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+    // check if the user is logged in
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      // if the user is logged in, hide the login link
+      $("").hide();
+    }
+  });
+        // let name=localStorage.getItem('name')?localStorage.getItem('name'):''
+        // console.log(name);
+        // if(name=='')
+        // {
+        //   alert('U need to login first');
+        //   window.location.href="./login.html";
+        // }
+//         function Logout()
+//         {
+//           localStorage.removeItem('name');
+//           localStorage.removeItem('email');
+//           window.location.href="./login.html";
+//         }
+//   </script>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"><span>j</span>eevan</a>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#AboutUs">About Us</a>
+        <a href="#clubs">Clubs</a>
+        <a href="blog.html">Newsletter</a>
+
+        <a href="register.html">Register</a>
+        <!-- <a href="#" id="logout-button" onclick="logout()" >Logout</a>
+        <span id="welcome-message" ></span> -->
+        <!-- <button onclick="Logout();" style="float: right;">Logout</button> -->
+
+    </nav>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3> JIMS Events<span> <br> <h4> Do something for the foundation of your life </h4> </span></h3>
+        <a href="contactus.html" class="btn">contact us</a>
+    </div>
+
+    <div class="swiper-container home-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/party.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/sporty.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/meet.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/degree.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/dance.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/meeting.jpg" alt=""></div>
+        </div>
+    </div>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // options
+        autoplay: true,
+    });
+</script> -->
+
+
+</section>
+
+<!-- home section ends -->
+
+<!-- service section starts  -->
+
+<section class="clubs" id="clubs">
+
+    <h1 class="heading"> our <span>Clubs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Cultral </h3>
+            <p>The cultural club of JIMS aims at encouraging students to participate in various cultural activities like Dance, Music, Photography, Drama, Art & Craft and many more.  </div>
+
+        <div class="box">
+            <h3>Patriotic </h3>
+            <p>The youth of today will inherit the nation tomorrow to keep faith with those who have gone before and upon whose toil and sacrifice the nation was built, youth needs to show patriotism..</p>
+        </div>
+
+        <div class="box">
+            <h3>Sports </h3>
+            <p>At JIMS we understand the importance of promoting the Sports Talent of the young generation and in pursuance of this mission we have an active Sports  which offers opportunities for students to develop leadership, management, and organizational skills  </div>
+
+        <div class="box">
+            
+            <h3>TEKQbe </h3>
+            <p>The objective is to give a platform to the students where in students who have got good programming skills who can organise events related to programming and participate in other colleges, they can conduct talk session among themselves and junior students.     </div>
+
+        <div class="box">
+            <h3>Academic </h3>
+            <p>The aim of the academic club is to identify areas of interest related to the use of learning technologies in support of learning and overall development of students. It focuses on set of skills like : Time management, Presentation skills, leadership and management skills in the students.</p>
+        </div>
+
+        <div class="box">
+            <h3>Economics </h3>
+            <p>To give students clear undertsating of how indian ecomoy functions and how they can contribute towards economic development of the country. Such as: Business quiz, guest lectures, Awareness programmes.</p>
+        </div>
+        <div class="box">
+            <h3>HR </h3>
+            <p>Samanvay - The HR  at JIMS provides a platform to the budding managers at JIMS to showcase their understanding of contemporary trends & issues in HR. It empowers the students to think, conceptualize, plan & execute HR related activities such as role plays, management games, brain-storming sessions & presentations with the objective to gain insights into changing dynamics of HR.  </p>   </div>
+        <div class="box">
+            <h3>Finance </h3>
+            <p>Investofin- the finance club of JIMS is formed for those students who want to excel in the field of finance and to help people improve their knowledge of financial world. It is formed keeping in mind the interest of students in finance domain.   </p>   </div>
+        <div class="box">
+            <h3>Entrepreneurship Cell</h3>
+            <p>Tarkash’ is an Entrepreneurship Cell in JIMS, which aims to instil entrepreneurial mind-sets in the students as well as to encourage them to develop and showcase their business ideas. </p> </div>
+    </div>
+
+</section>
+
+<!-- service section ends -->
+
+<!-- about section starts  -->
+
+
+<!-- about section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="events" id="events">
+
+    <h1 class="heading">our <span>events</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/Nukkad.jpg" alt="">
+            <h3 class="title">Patriotic </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>    
+                <a href="#" class="fas fa-eye" target="_blank"> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/tt.jpg" alt="">
+            <h3 class="title">Sports </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="sports.html" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/acad.jpg" alt="">
+            <h3 class="title">Academic </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/econ.jpg" alt="">
+            <h3 class="title">Economics </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/cunt.jpg" alt="">
+            <h3 class="title">Cultural </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/teq.jpg" alt="">
+            <h3 class="title">IT </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">   
+            <img src="images/fina.jpg" alt="">
+            <h3 class="title">Finance </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+        <div class="box">   
+            <img src="images/hrr.jpg" alt="">
+            <h3 class="title">HR </h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+        <!-- <div class="box">   
+            <img src="images/j1.jpeg" alt="">
+            <h3 class="tij2">Gendeer ChampionshipClub</h3>
+            <div class="ij3ns"e>
+                <a href="j4class="fas fa-heart"></a>
+                <a href="j5claess="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div> -->
+
+    </div>
+
+</section>
+
+<section class="AboutUs" id="AboutUs">
+
+    <h1 class="heading"><span>about</span> us </h1>
+    
+    <div class="row">
+    
+        <div class="image">
+            <img src="images/jims.webp" alt="">
+        </div>
+    
+        <div class="content">
+            <p>The Institute encourages students to take student driven academic/professional initiatives to compliment their class room learning with practical aspects of the real business world. These activities range from organizing special events focusing on current affairs to carefully planned symposia and lectures that enrich the participants' professional, academic and extra-curricular interests. To achieve this student have various academic/professional clubs in different functional areas. The speakers for all these events are eminent business personalities. All the events are planned and executed by the students, in close coordination with Area faculty members.</p>
+            
+            <!-- <a href="#" class="btn">contact us</a> -->
+            
+        </div>
+    
+    </div>
+    
+    </section>
+    
+<!-- gallery section ends -->
+
+
+            
+
+<!-- price section ends -->
+
+<!-- review section starts  -->
+
+<section class="faculty" id="faculty"> 
+    
+    <h1 class="heading">Faculty <span>Coordinators</span></h1>
+
+    <div class="review-slider swiper-container">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/disha.jpg" alt="">
+                    <div class="user-info">
+                        <h3> Dr.Disha Grover</h3>
+                        <span>Asst. Professor- Information Technology</span> <br>
+                        <p>Specialisation: C Programming Language
+                            Dr.Disha Grover  has been working asAssistant Professor with JIMS, Sector-5 Rohini New Delhi for the past 9 years. He worked in academic for 10 year
+                    </div>
+                </div>
+                <p>Cultral  Coordinator</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                   
+                    <div class="user-info">
+                        <img src="images/devesh.jpg" alt="">
+                        <h3>Mr. Devesh Lowe</h3>
+                        <span>Asst. Professor- Information Technology</span> <br>
+                        <p>Specialisation: Data Structures and Programming Languages
+                            Devesh Lowe has been working asAssistant Professor with JIMS, Sector-5 Rohini, New Delhi for the past 8 years. He worked in academic for 10 year</p>
+                    </div>
+                </div>
+            
+            </div>
+
+    
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                   
+                    <div class="user-info">
+                        <img src="images/Priyanka.jpg" alt="">
+                        <h3> Dr. Priyanka Gandhi</h3>
+                        <span>Associate Professor- Information Technology </span>
+                        <p>Specialisation: IT and HR
+                            Dr. Priyanka Gandhi, is Assistant Professor at Jagan Institute of Management studies. Dr. Gandhi has completed her PhD from JaganNath University, Jaipur in the Customer Relationship Management domain. She has done MBA with She has published various research papers urnals of repute listed in UGC </p>
+                    </div>
+                </div>
+                <p>   </div>
+
+        </div>
+    
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>branches</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> rohini jims </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> vasantkunj jims </a>
+            
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> about us</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> clubs</a>
+    
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 8595847764</a>
+            <a href="#"> <i class="fas fa-envelope"></i> ishika_bca20s1@jimsindia.org </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> rohini,delhi, india - 110089 </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/JimsDelhi/"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://twitter.com/jimsrohini"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.instagram.com/jimsrohinisector5/?hl=en"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="https://www.linkedin.com/school/jagan-institute-of-management-studies/?originalSubdomain=in"> <i class="fab fa-linkedin"></i> linkedin </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>IsSuDh</span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- theme toggler  -->
+
+<div class="theme-toggler">
+
+    <div class="toggle-btn">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <h3>choose color</h3>
+
+    <div class="buttons">
+        <div class="theme-btn" style="background: #3867d6;"></div>
+        <div class="theme-btn" style="background: #f7b731;"></div>
+        <div class="theme-btn" style="background: #ff0033;"></div>
+        <div class="theme-btn" style="background: #20bf6b;"></div>
+        <div class="theme-btn" style="background: #fa8231;"></div>
+        <div class="theme-btn" style="background: #FC427B;"></div>
+        <div class="theme-btn" style="background:grey;"></div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->   
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/b6442fa2b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">SignIn</h1>
+            <form id="signin-form">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="Email" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-regular fa-lock"></i>
+                        <input type="password" placeholder="password" id="password" required>
+                    </div>
+                </div>
+                <!-- <p> <b>Forgot Password </b> <a href="failure.html">Click Here</a></p> <br> -->
+                <style>
+                    a:link {
+                        color: blue;
+                    }
+                </style>
+            </form>
+            <div class="btn-field">
+                <!-- <button type="button" id="signupbtn" onclick="collectdata()">Sign Up</button> -->
+                <!-- <div class="w-18">
+                    <span id="message" class="succesfull"></span>
+                </div> -->
+                <button type="submit" id="signinbtn" onclick="handleLogin()" class="disable">Log in </button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+            const handleLogin= async()=>{
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            console.log(email,password);
+        let result = await fetch("http://localhost:3000/login", {
+            
+          method:'post',
+          body:JSON.stringify({email,password}),
+          headers:{
+            'content-type':'application/json'
+          }
+        
+    });
+     result = await result.json();
+            console.log(result);
+            // localStorage.setItem("user",JSON.stringify(result))
+
+//     // navigate('/')
+    if(result.name){
+        localStorage.setItem("user",JSON.stringify(result))
+        location.href= "./index.html";
+        alert("login succesfull!!");
+    }
+    else{
+        alert("please enter correct details!!!")
+    }
+
+}
+    </script>
+</body>
+</html>
